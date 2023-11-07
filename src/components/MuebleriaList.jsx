@@ -5,9 +5,11 @@ export function MuebleriaList ({ muebleria }) {
         <section>
             <ul className="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-5">
                 {muebleria.map(mueble => (
-                    <li key={mueble.id} className="bg-white py-3 px-5 rounded-lg border shadow-lg space-y-1">
-                        <img className="w-full h-40 object-contain object-center" src={`/img/${mueble.image}.webp`} alt={`imagen ${mueble.name}`} />
-                        <p className="text-slate-700 uppercase font-semibold">{mueble.name}</p>
+                    <li key={mueble.id} className="bg-white flex flex-col justify-between py-3 px-5 rounded-lg border shadow-lg space-y-1">
+                        <div>
+                            <img className="w-full h-40 object-contain object-center" src={`/img/${mueble.image}.webp`} alt={`imagen ${mueble.name}`} />
+                            <p className="text-slate-700 uppercase font-semibold">{mueble.name}</p>
+                        </div>
                         
                         <div className="flex items-center justify-between">
                             <p className="font-bold text-lg text-red-600">${mueble.price}</p>
